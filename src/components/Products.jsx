@@ -10,14 +10,23 @@ function Products(props) {
     },[]);
 
     console.log(products);
+    if (products.loading === true){
+        return (
+            <div>
+                <h1>Loading...</h1>
+            </div>
+        )
+    }
     return (
         <div>
             <h3>Products finally there</h3>
-            {/*<button */}
-            {/*    onClick={()=>dispatch(getProducts())}*/}
-            {/*    className="btn-outline-success">*/}
-            {/*    GET PRODUCTS*/}
-            {/*</button>*/}
+            {products.products.map((product,index)=>{
+                return (
+                    <div key={index}>
+                        <div>{product.title}</div>
+                    </div>
+                )
+            })}
         </div>
     )
 }
