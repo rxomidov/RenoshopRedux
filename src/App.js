@@ -1,25 +1,18 @@
 import React from "react";
 import './App.css';
-import Posts from "./components/Posts";
-import PostForm from "./components/PostForm";
+import {useHistory} from "react-router-dom";
 
 import "bootstrap/dist/css/bootstrap.min.css";
-import {Provider} from "react-redux";
-
-import store from "./redux/Store";
-import Products from "./components/Products";
+import Routes from "./routes/Routes";
 
 function App() {
+    const history = useHistory();
+    //api.subscribe(history);
+
     return (
-        <Provider store={store}>
-            <div className="App">
-                <div className="container">
-                    {/*<Posts/>*/}
-                    {/*<PostForm/>*/}
-                    <Products/>
-                </div>
-            </div>
-        </Provider>
+        <div>
+            <Routes/>
+        </div>
     );
 }
 

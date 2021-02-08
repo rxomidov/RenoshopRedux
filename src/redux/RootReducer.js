@@ -2,8 +2,10 @@ import {combineReducers} from "redux";
 
 import PostReducer from "./Posts/PostReducer";
 import ProductReducer from "./Products/ProductReducer"
+import CartReducer from "./Cart/CartReducer";
 
 export const rootReducer = combineReducers({
     posts: PostReducer,
-    products: ProductReducer
+    products: ProductReducer,
+    cartItems: CartReducer
 });
