@@ -8,7 +8,7 @@ export const getProducts = () => {
     return async function(dispatch) {
         dispatch(setLoading());
         const response = await fetch(
-            "https://fakestoreapi.com/products"
+            "https://fakestoreapi.com/products?_limit=10"
         );
         const data = await response.json();
         dispatch({ type: GET_PRODUCTS, payload: data });

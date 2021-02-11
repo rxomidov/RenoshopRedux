@@ -7,6 +7,10 @@ import {BrowserRouter} from "react-router-dom";
 import store from "./redux/Store";
 import {Provider} from "react-redux";
 
+// import "tailwindcss/base.css";
+// import "tailwindcss/components.css";
+// import "tailwindcss/utilities.css";
+
 ReactDOM.render(
     <>
         <BrowserRouter>

@@ -6,6 +6,7 @@ import Footer from "../components/Footer/Footer";
 const HomePage = lazy(()=>import("../pages/HomePage/Homepage"));
 const ProductsPage = lazy(()=>import("../pages/ProductsPage/Products"));
 const CartPage = lazy(()=>import("../pages/CartPage/CartPage"));
+const WishListPage = lazy(()=>import("../pages/WishListPage/WishListPage"));
 
 const Routes = () => {
     return (
@@ -20,6 +21,7 @@ const Routes = () => {
                 <Route exact path="/" component={HomePage}/>
                 <Route path="/products" component={ProductsPage}/>
                 <Route path="/cart" component={CartPage}/>
+                <Route path="/wishlist" component={WishListPage}/>
             </Switch>
             <Footer/>
         </Suspense>
